@@ -101,5 +101,10 @@ if [ $? = 0 ]; then
     fi
 fi
 
+# Launching up.sh
+echo "Launching up.sh"
+exec /etc/openvpn/up.sh
+
+# Launching OpenVPN
 echo "Running 'openvpn ${ARGS[@]} ${USER_ARGS[@]}'"
 exec openvpn ${ARGS[@]} ${USER_ARGS[@]}
